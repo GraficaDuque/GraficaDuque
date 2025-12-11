@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Gráfica Duque</title>
+    <link rel="stylesheet" href="/Duque_jsx/css/style.css">
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div
+                    class="bg-gradient-to-br from-blue-600 to-blue-800 text-white font-bold text-2xl w-12 h-12 rounded-lg flex items-center justify-center">
+                    GD</div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-900">Gráfica Duque</h1>
+                    <p class="text-xs text-gray-600">Gráfica & Informática</p>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="grafica.html" class="text-gray-700 hover:text-blue-600">Gráfica</a>
+                <a href="informatica.html" class="text-gray-700 hover:text-blue-600">Informática</a>
+                <a href="portfolio.html" class="text-gray-700 hover:text-blue-600">Portfólio</a>
+                <a href="contato.html" class="text-gray-700 hover:text-blue-600">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20 px-4 sm:px-6 lg:px-8 mt-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Entre em Contato</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                Estamos prontos para atender você! Solicite seu orçamento ou agende um atendimento.
+            </p>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- Informações de contato -->
+        <div class="space-y-6">
+            <div class="p-6 shadow rounded bg-white">
+                <h2 class="text-xl font-bold mb-4">Informações de Contato</h2>
+                <p><strong>Telefone:</strong> (92) 9 8861-0142</p>
+                <p><strong>E-mail:</strong> contato@graficaduque.com.br</p>
+                <p><strong>Endereço:</strong> Mini Shopping Compensa, Box 28</p>
+                <p><strong>Horário:</strong> Segunda a Domingo - 9h às 17h</p>
+                <p><strong>Instagram:</strong> <a href="https://instagram.com/grafica_duque"
+                        target="_blank">@grafica_duque</a></p>
+            </div>
+            <div class="p-6 shadow rounded bg-blue-50 text-center">
+                <p><strong>Atendimento presencial:</strong><br>Visite-nos no Mini Shopping Compensa, Box 28</p>
+            </div>
+        </div>
+
+        <!-- Formulários -->
+        <div class="lg:col-span-2 space-y-12">
+
+            <!-- Formulário Gráfica -->
+            <div class="p-6 shadow rounded bg-white">
+                <h2 class="text-2xl font-bold mb-6">Solicitar Orçamento - Serviços Gráficos</h2>
+                <form action="processa_contato.php" method="POST" class="space-y-4">
+                    <input type="text" name="nome" placeholder="Nome Completo *" required
+                        class="w-full border rounded-lg px-4 py-2">
+                    <input type="email" name="email" placeholder="E-mail *" required
+                        class="w-full border rounded-lg px-4 py-2">
+                    <input type="text" name="telefone" placeholder="Telefone *" required
+                        class="w-full border rounded-lg px-4 py-2">
+                    <input type="text" name="produto" placeholder="Produto *" required
+                        class="w-full border rounded-lg px-4 py-2">
+                    <input type="text" name="quantidade" placeholder="Quantidade"
+                        class="w-full border rounded-lg px-4 py-2">
+                    <textarea name="mensagem" placeholder="Mensagem" rows="5"
+                        class="w-full border rounded-lg px-4 py-2"></textarea>
+
+                    <input type="hidden" name="tipo" value="grafica">
+
+                    <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+                        Enviar Orçamento
+                    </button>
+                </form>
+            </div>
+
+            <!-- Formulário Informática -->
+            <div class="p-6 shadow rounded bg-white">
+                <h2 class="text-2xl font-bold mb-6">Agendar Atendimento - Informática</h2>
+                <form action="processa_contato.php" method="POST" class="space-y-4">
+                    <input type="text" name="nome" placeholder="Nome Completo *" required
+                        class="w-full border rounded-lg px-4 py-2">
+                    <input type="email" name="email" placeholder="E-mail *" required
+                        class="w-full border rounded-lg px-4 py-2">
+                    <input type="text" name="telefone" placeholder="Telefone *" required
+                        class="w-full border rounded-lg px-4 py-2">
+                    <input type="text" name="servico" placeholder="Serviço *" required
+                        class="w-full border rounded-lg px-4 py-2">
+                    <input type="date" name="data" placeholder="Data Preferencial"
+                        class="w-full border rounded-lg px-4 py-2">
+                    <input type="time" name="hora" placeholder="Horário Preferencial"
+                        class="w-full border rounded-lg px-4 py-2">
+                    <textarea name="mensagem" placeholder="Descrição do Problema" rows="5"
+                        class="w-full border rounded-lg px-4 py-2"></textarea>
+
+                    <input type="hidden" name="tipo" value="informatica">
+
+                    <button type="submit"
+                        class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-2 px-4 rounded w-full">
+                        Agendar Atendimento
+                    </button>
+                </form>
+            </div>
+
+        </div> <!-- fim col-span-2 -->
+    </main> <!-- fim conteúdo principal -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Coluna 1: Sobre -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Gráfica Duque</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Soluções gráficas e tecnológicas em um só lugar. Impressões de qualidade e suporte técnico
+                    especializado para o seu negócio.
+                </p>
+            </div>
+
+            <!-- Coluna 2: Links rápidos -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="index.html" class="hover:text-blue-400">Início</a></li>
+                    <li><a href="grafica.html" class="hover:text-blue-400">Serviços Gráficos</a></li>
+                    <li><a href="informatica.html" class="hover:text-blue-400">Serviços de Informática</a></li>
+                    <li><a href="portfolio.html" class="hover:text-blue-400">Portfólio</a></li>
+                    <li><a href="contato.html" class="hover:text-blue-400">Contato</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Contato -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contato</h3>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li>📞 (92) 9 8861-0142</li>
+                    <li>✉️ contato@graficaduque.com.br</li>
+                    <li>📍 Mini Shopping Compensa, Box 28</li>
+                    <li><a href="https://instagram.com/grafica_duque" target="_blank" class="hover:text-pink-400">📷
+                            @grafica_duque</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Linha inferior -->
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+            <p class="text-gray-500 text-sm">© 2025 Gráfica Duque. Todos os direitos reservados.</p>
+            <p class="text-gray-500 text-xs mt-2">Desenvolvido por Nickolas</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
